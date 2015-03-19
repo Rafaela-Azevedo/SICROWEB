@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Cadastro de Setores da Biblioteca</title>
+
+<h1>Cadastro de Setores da Biblioteca</h1>
+
+</h:head>
+
+<h:body>
+
+<h:form>
+
+	<p:panel>
+
+	<p:panelGrid columns="3">
+					
+			<p:outputLabel value="Nome do Setor:" />
+			<p:inputText id="nome" value="#{setorBean.setor.nome}" size="20" />		
+			<p:message for="nome" />
+						    									
+			<p:commandButton id="btnE" value="Enviar" type="submit" action="#{setorBean.salvar}" />
+			<p:commandButton id="btnL" value="Limpar" type="reset" />
+			<p:commandButton id="btnV" value="Voltar" type="submit" action ="#{setorBean.voltar}" />
+			
+	</p:panelGrid>
+	
+	</p:panel>
+	
+</h:form>
+</h:body>
+</html>
